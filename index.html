@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+</head>
+
+<body>
+
+  <!-- Heading -->
+  <h1>Selected Current Long-Term Health Condition Estimates Across States</h1>
+  
+  <!-- Description -->
+  <p>The major long-term health conditions are Arthritis, Back problems, Hay fever and allergies, and mental and behavioral conditions.</p>
+
+  <!-- Chart Container -->
+  <div id="line_chart"></div>
+
+  <script type="text/javascript">
+    var spec2 = "js/selected_lt_cond_linechart.vg.json";
+    vegaEmbed('#line_chart', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+
+</body>
+</html>
